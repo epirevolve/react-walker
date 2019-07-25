@@ -4,9 +4,4 @@ LABEL maintainer="yukihiro <epirevolve@gmail.com>"
 
 RUN mkdir /src
 VOLUME ["/src"]
-ARG src_path
-ADD ${src_path}/package.json /src
 WORKDIR /src
-
-RUN set -ex \
-    && npm install
