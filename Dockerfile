@@ -1,17 +1,11 @@
-FROM node:10
+FROM react-walker-base:latest
 
 LABEL maintainer="yukihiro <epirevolve@gmail.com>"
 
-RUN mkdir /src
-VOLUME ["/src"]
+ARG src_path
 
-RUN mkdir /statics
-VOLUME ["/statics"]
-
-RUN mkdir /server
-ADD ./src /server
+ADD ./${src_path} /src_copy
+WORKDIR /src_copy
+RUN npm install
 
 WORKDIR /server
-RUN set -ex \
-    && npm install express ejs webpack webpack-cli webpack-stream gulp \
-    && npm install -g gulp gulp-cli
