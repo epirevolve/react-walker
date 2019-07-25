@@ -13,4 +13,5 @@ ADD ./src /server
 
 WORKDIR /server
 RUN set -ex \
-    && npm install express ejs webpack webpack-cli webpack-stream
+    && npm install express ejs webpack webpack-cli webpack-stream gulp \
+    && npm install -g gulp gulp-cli
