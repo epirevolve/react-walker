@@ -15,3 +15,6 @@ WORKDIR /server
 RUN set -ex \
     && npm install express ejs webpack webpack-cli webpack-stream gulp \
     && npm install -g gulp gulp-cli
+
+ENTRYPOINT [ "/bin/sh" ]
+CMD [ "startup.sh" ]
