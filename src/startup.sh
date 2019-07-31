@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo 'start copy files from origin to copy'
-cp -r -f -p /src_origin/* /src_copy
+cp -r -f /src_origin/. /src_copy
 echo 'fin copy files'
 
 cd /src_copy
