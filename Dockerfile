@@ -16,5 +16,7 @@ RUN set -ex \
     && npm install express ejs webpack webpack-cli webpack-stream gulp \
     && npm install -g gulp gulp-cli
 
+EXPOSE 3000
+
 ENTRYPOINT [ "/bin/sh" ]
 CMD [ "startup.sh" ]
